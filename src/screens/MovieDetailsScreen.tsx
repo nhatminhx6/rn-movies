@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   FlatList,
+  SafeAreaView,
 } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import type { RouteProp } from '@react-navigation/native';
@@ -24,7 +25,6 @@ import {
 // @ts-ignore
 type MovieDetailsRouteProp = RouteProp<RootStackParamList, 'MovieDetails'>;
 
-
 const MovieDetailsScreen: React.FC = () => {
   // @ts-ignore
   const route = useRoute<MovieDetailsRouteProp>();
@@ -36,7 +36,6 @@ const MovieDetailsScreen: React.FC = () => {
   const items = useWatchlistStore(state => state.items);
   const add = useWatchlistStore(state => state.add);
   const remove = useWatchlistStore(state => state.remove);
-
 
   const director = useMemo(() => {
     if (!data?.credits?.crew) return null;
@@ -57,9 +56,7 @@ const MovieDetailsScreen: React.FC = () => {
 
   // tính theo items để re-render liền
   const inWatchlist =
-    data && items.length > 0
-      ? items.some(m => m.id === data.id)
-      : false;
+    data && items.length > 0 ? items.some(m => m.id === data.id) : false;
 
   const handleToggleWatchlist = useCallback(() => {
     if (!data) return;
@@ -106,7 +103,7 @@ const MovieDetailsScreen: React.FC = () => {
   return (
     <ScrollView className="flex-1 bg-[#f7f7f7]">
       {/* top bar */}
-      <View className="bg-[#0F7EA7] pb-5 pt-12 px-5 rounded-b-3xl">
+      <View className="bg-[#0F7EA7] pb-5 pt-24 px-5 rounded-b-3xl">
         <View className="mb-4 flex-row items-center justify-between">
           <TouchableOpacity
             onPress={() => navigation.goBack()}

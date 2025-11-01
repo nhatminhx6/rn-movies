@@ -5,6 +5,7 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
+  SafeAreaView,
 } from 'react-native';
 import { ChevronRight } from 'lucide-react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -86,7 +87,7 @@ const WatchlistScreen: React.FC = () => {
   );
 
   return (
-    <View className="flex-1 bg-[#f7f7f7]">
+    <SafeAreaView className="flex-1 bg-[#f7f7f7]">
       <FlatList
         data={items}
         keyExtractor={item => String(item.id)}
@@ -118,7 +119,7 @@ const WatchlistScreen: React.FC = () => {
           </View>
         }
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

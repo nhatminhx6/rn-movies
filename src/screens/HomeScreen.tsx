@@ -1,14 +1,15 @@
 import React, { useState, useCallback } from 'react';
 import {
-    View,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    Image,
-    ActivityIndicator,
-    RefreshControl,
-    FlatList,
-    ListRenderItemInfo,
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  ActivityIndicator,
+  RefreshControl,
+  FlatList,
+  ListRenderItemInfo,
+  SafeAreaView,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ChevronDown, ChevronRight } from 'lucide-react-native';
@@ -181,7 +182,7 @@ const HomeScreen: React.FC = () => {
     const data = movies.slice(0, visibleCount);
 
     return (
-        <View className="flex-1 bg-[#f7f7f7]">
+        <SafeAreaView className="flex-1 bg-[#f7f7f7]">
             <FlatList
                 data={data}
                 keyExtractor={item => String(item.id)}
@@ -283,7 +284,7 @@ const HomeScreen: React.FC = () => {
                     )
                 }
             />
-        </View>
+        </SafeAreaView>
     );
 };
 
