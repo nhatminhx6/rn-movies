@@ -11,7 +11,8 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@env": ["./env.d.ts"]
     }
   },
   "include": [
