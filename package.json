@@ -1,0 +1,50 @@
+{
+  "name": "MovieApp",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native/new-app-screen": "0.82.1",
+    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/native-stack": "^6.11.0",
+    "@tanstack/react-query": "^5.90.5",
+    "axios": "^1.13.1",
+    "react": "19.1.1",
+    "react-native": "0.82.1",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native-screens": "^4.18.0",
+    "react-native-svg": "^15.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "20.0.0",
+    "@react-native-community/cli-platform-android": "20.0.0",
+    "@react-native-community/cli-platform-ios": "20.0.0",
+    "@react-native/babel-preset": "0.82.1",
+    "@react-native/eslint-config": "0.82.1",
+    "@react-native/metro-config": "0.82.1",
+    "@react-native/typescript-config": "0.82.1",
+    "@types/jest": "^29.5.13",
+    "@types/react": "^19.1.1",
+    "@types/react-test-renderer": "^19.1.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "nativewind": "^2.0.11",
+    "prettier": "2.8.8",
+    "react-test-renderer": "19.1.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
