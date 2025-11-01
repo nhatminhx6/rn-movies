@@ -85,6 +85,11 @@ You've successfully run and modified your React Native App. :partying_face:
 # Troubleshooting
 
 If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+# DEMO
+
+https://github.com/user-attachments/assets/31f0e230-6c71-44e0-a52e-3f1a797a34f0
+
+
 
 # Learn More
 
