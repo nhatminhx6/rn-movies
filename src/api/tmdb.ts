@@ -1,6 +1,11 @@
 import axios, { AxiosResponse } from 'axios';
 import { TMDB_TOKEN } from '@env';
-import type { TMDBListResponse, Movie, TMDBCreditsResponse } from '@/types/tmdb';
+import type {
+  TMDBListResponse,
+  Movie,
+  TMDBCreditsResponse,
+  TMDBMovieDetailsFull,
+} from '@/types/tmdb';
 
 // Axios client setup
 // -------------------------
@@ -83,6 +88,18 @@ export function getMovieRecommendations(
 export function searchMovies(query: string): Promise<TMDBListResponse> {
   const encoded = encodeURIComponent(query);
   const url = `/search/movie?query=${encoded}&include_adult=false&language=en-US&page=1`;
-  console.log('MERA searchMovies =>', url);
   return fetchFromTMDB<TMDBListResponse>(url);
 }
+
+// -------------------------
+// FULL movie detail (details + credits + recommendations)
+// -------------------------
+
+export function getMovieDetailsFull(
+  id: number,
+): Promise<TMDBMovieDetailsFull> {
+  return fetchFromTMDB<TMDBMovieDetailsFull>(
+    `/movie/${id}?language=en-US&append_to_response=credits,recommendations`,
+  );
+}
+

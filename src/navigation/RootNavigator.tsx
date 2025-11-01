@@ -8,13 +8,14 @@ export type RootStackParamList = {
   MovieDetails: { movieId: number };
 };
 
+// @ts-ignore
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="MainTabs" component={MainTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="MovieDetails" component={MovieDetailsScreen} options={{ title: 'Details' }} />
+      <Stack.Screen name="MovieDetails" component={MovieDetailsScreen} options={{ title: 'Details',headerShown: false }} />
     </Stack.Navigator>
   );
 };
